@@ -1,0 +1,172 @@
+@font-face {
+    src: url(../../fonts/DancingScript-VariableFont_wght.ttf);
+    font-family: dancing;
+}
+
+@font-face {
+    src: url(../../fonts/Lato-Regular.ttf);
+    font-family: lato
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+html, body {
+  box-sizing: border-box;
+}
+body {
+    color: rgb(203, 178, 60);
+    font-family: lato;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+h2, h3 {
+    font-family: dancing;
+    text-shadow: 1px 1px 5px black;
+}
+.font-small {
+    font-size: 18px;
+}
+
+.font-medium {
+    font-size: 20px;
+}
+
+.font-large {
+    font-size: 25px;
+}
+
+.font-xl {
+    font-size: 30px;
+}
+
+.font-xxl {
+    font-size: 40px;
+}
+
+
+/*Content*/
+
+article {
+    display: grid;
+    grid-template-columns: minmax(auto, 2fr) repeat(3, minmax(300px, 1fr)) minmax(auto, 2fr);
+    grid-template-rows: 170px 200px 200px 200px 100px 100px;
+    width: 100vw;
+    background: rgb(128, 128, 128);
+}
+
+/*Div classes are labeled by the order they were created*/
+
+/*Nav*/
+.nav-background {
+    grid-column: 1/6;
+    grid-row: 1/2;
+    background-color: rgb(159, 0, 0);
+}
+
+.one {
+    text-align: left;
+    position: relative;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+    .one div {
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+    }
+    .one h1 a {
+        text-decoration: none;
+        color: rgb(203, 178, 60);
+    }
+
+.two {
+    position: relative;
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+}
+
+    .two h2 {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 5px;
+        padding-bottom: 10px;
+    }
+
+.two-content-container {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+.two a, .footer-nav a {
+    text-decoration: none;
+    padding: 5px;
+    color: rgb(203, 178, 60);
+}
+
+    .two a:hover, .footer-nav a:hover {
+        color: rgb(208, 64, 0);
+    }
+
+/*Main*/
+
+.content-background {
+    grid-column: 1/6;
+    grid-row: 2/6;
+    background-color: rgb(207, 89, 0);
+}
+
+.three {
+    margin-top: 55px;
+    grid-column: 2/5;
+    grid-row: 2/3;
+}
+.four {
+    text-align: center;
+    margin: auto;
+    grid-column: 3/5;
+    grid-row: 3/5;
+    transition: transform .2s;
+}
+.four:hover{
+    transform: scale(1.1);
+}
+.five {
+    text-align: center;
+    margin: auto;
+    grid-column: 2/3;
+    grid-row: 3/5;
+}
+
+/*Footer styling.*/
+
+.footer-background {
+    background-color: rgb(159, 0, 0);
+    grid-column: 1/6;
+    grid-row: 6/7;
+}
+
+footer {
+    display: inherit;
+}
+
+.footer-copywrite {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    grid-column: 2/3;
+    grid-row: 6/7;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    grid-column: 3/5;
+    grid-row: 6/7;
+}

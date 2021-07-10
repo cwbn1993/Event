@@ -1,0 +1,355 @@
+@font-face {
+    src: url(../../fonts/DancingScript-VariableFont_wght.ttf);
+    font-family: dancing;
+}
+
+@font-face {
+    src: url(../../fonts/Lato-Regular.ttf);
+    font-family: lato
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html, body {
+    box-sizing: border-box;
+}
+
+body {
+    color: rgb(203, 178, 60);
+    font-family: lato;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+label, h2, h3 {
+    font-family: dancing;
+    text-shadow: 1px 1px 5px black;
+}
+
+.font-small {
+    font-size: 18px;
+}
+
+.font-medium {
+    font-size: 20px;
+}
+
+.font-large {
+    font-size: 25px;
+}
+
+.font-xl {
+    font-size: 30px;
+}
+
+.font-xxl {
+    font-size: 40px;
+}
+
+/*Content*/
+
+article {
+    display: grid;
+    grid-template-columns: minmax(auto, 2fr) repeat(3, minmax(300px, 1fr)) minmax(auto, 2fr);
+    grid-template-rows: 170px 150px 2fr 2fr 100px 100px;
+    width: 100vw;
+    background: rgb(128, 128, 128);
+}
+
+/*Div classes are labeled by the order they were created*/
+
+/*Main*/
+
+.nav-background {
+    grid-column: 1/6;
+    grid-row: 1/2;
+    background-color: rgb(159, 0, 0);
+}
+
+.one {
+    text-align: left;
+    position: relative;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+    .one div {
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+    }
+
+    .one h1 a {
+        text-decoration: none;
+        color: rgb(203, 178, 60);
+    }
+
+.two {
+    position: relative;
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+}
+
+    .two h2 {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 5px;
+        padding-bottom: 10px;
+    }
+
+.two-content-container {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+.two a, .footer-nav a {
+    text-decoration: none;
+    padding: 5px;
+    color: rgb(203, 178, 60);
+}
+
+    .two a:hover, .footer-nav a:hover {
+        color: rgb(208, 64, 0);
+    }
+
+/*Main*/
+
+.content-background {
+    grid-column: 1/6;
+    grid-row: 2/6;
+    background-color: rgb(207, 89, 0);
+}
+
+.three {
+    margin-top: 55px;
+    grid-column: 2/5;
+    grid-row: 2/3;
+}
+
+/*Workshop descriptions*/
+
+.four {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 190px 240px 190px;
+    margin: auto;
+    grid-column: 2/5;
+    grid-row: 3/5;
+}
+
+.four-two, .four-three, .four-four {
+    text-align: left;
+    padding-right: 30px;
+}
+
+.four-one {
+    text-align: center;
+    grid-column: 1/6;
+    grid-row: 1/2;
+}
+
+.four-two {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+.four-three {
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+.four-four {
+    grid-column: 1/3;
+    grid-row: 4/5;
+}
+
+/*Form*/
+
+.five {
+    display: grid;
+    grid-template-columns: 150px 220px;
+    grid-template-rows: 50px 50px 70px 70px 70px 150px 50px;
+    margin: 0 auto auto auto;
+    grid-column: 3/5;
+    grid-row: 2/5;
+    background-color: rgb(159, 0, 0);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.input-style {
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(230, 230, 230);
+}
+
+    .input-style:focus {
+        outline: none;
+        box-shadow: 0 0 5px black;
+    }
+
+.form-text {
+    text-align: left;
+    padding: 10px;
+}
+
+.five-one {
+    align-self: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.five-two {
+    justify-self: center;
+    align-self: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.five-three {
+    align-self: center;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.five-four {
+    justify-self: center;
+    align-self: center;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.checkbox-style {
+    appearance: none;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: rgb(230, 230, 230);
+}
+
+    .checkbox-style:checked {
+        background-color: rgb(207, 89, 0);
+        box-shadow: 0 0 1px black;
+        outline: none;
+    }
+
+    .checkbox-style:hover {
+        cursor: pointer;
+    }
+
+.five-five {
+    align-self: center;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.five-six {
+    justify-self: center;
+    align-self: center;
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.five-seven {
+    align-self: center;
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.five-eight {
+    justify-self: center;
+    align-self: center;
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.five-nine {
+    align-self: center;
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+.five-ten {
+    justify-self: center;
+    align-self: center;
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+
+.five-eleven {
+    margin-top: 10px;
+    justify-self: center;
+    align-self: center;
+    grid-column: 1/3;
+    grid-row: 6/7;
+}
+
+textarea {
+    margin-top: 10px;
+    resize: none;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    background: rgb(230, 230, 230);
+}
+
+    textarea:focus {
+        outline: none;
+        box-shadow: 0 0 5px black;
+    }
+
+.five-twelve {
+    justify-self: center;
+    align-self: center;
+    grid-column: 1/3;
+    grid-row: 7/8;
+}
+
+.button {
+    font-family: lato;
+    color: rgb(203, 178, 60);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px ridge;
+    background-color: rgb(159, 0, 0);
+    transition-duration: 0.4s;
+}
+
+    .button:hover {
+        background-color: rgb(208, 64, 0);
+        cursor: pointer;
+    }
+
+/*Footer styling.*/
+
+.footer-background {
+    background-color: rgb(159, 0, 0);
+    grid-column: 1/6;
+    grid-row: 6/7;
+}
+
+footer {
+    display: inherit;
+}
+
+.footer-copywrite {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    grid-column: 2/3;
+    grid-row: 6/7;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    grid-column: 3/5;
+    grid-row: 6/7;
+}
